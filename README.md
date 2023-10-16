@@ -15,7 +15,3 @@ npm run serve
 npm run build
 ```
 
-### git add --productio https://github.com/
-```
-add https://github.com/
-```
