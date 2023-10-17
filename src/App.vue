@@ -4,6 +4,34 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'Fire1000App',
+
+  data() {
+    return {
+      
+    };
+  },
+
+  mounted() {
+    
+  },
+
+  methods: {
+    
+  },
+  created () {
+    let index = localStorage.getItem("index")
+    if(index){
+      this.$store.commit("setIndex",JSON.parse(index))
+    }
+    window.addEventListener("beforeunload",()=>{
+      localStorage.setItem("index",JSON.stringify(this.$store.state.index))
+    })
+  },
+};
+</script>
 <style >
 *{
   margin: 0;

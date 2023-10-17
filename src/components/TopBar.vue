@@ -5,7 +5,7 @@
             <logo v-bind:logo="logo"></logo>
         </el-col>
         <el-col :span="10">
-            <NavMenu v-bind:menuList="NavMenuList" @topClick="navMenuClick"></NavMenu>
+            <NavMenu v-bind:menuList="NavMenuList" @topClick="navMenuClick" :activeValue="this.$store.state.index"></NavMenu>
         </el-col>
         <el-col :span="7">
             <el-autocomplete v-model="AutoInput" placeholder="请输入搜索内容" :fetch-suggestions="querySeach"></el-autocomplete>
@@ -86,9 +86,14 @@ export default {
             }
         },
         navMenuClick(even) {
+            let indexValue = even.$el.attributes.name.value
+            let index = this.$store.state.index
+            // console.log("原本value"+indexValue,"store的值"+index);
+            if(index === indexValue) return
+            this.$store.commit("setIndex",indexValue)
+            // console.log("store修改后的值"+this.$store.state.index);
             let ph = even.$el.attributes.path.value
-            console.log(ph, typeof ph);
-            console.log(this.$router.push({path:ph}));
+            this.$router.push({path:ph})
         }
     }
 }

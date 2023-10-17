@@ -7,7 +7,7 @@
 
 <script>
     export default {
-        name:"Logo",
+        name:"LogoBar",
         data() {
             return {
             }
