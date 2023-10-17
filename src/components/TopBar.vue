@@ -34,12 +34,12 @@ export default {
                 {
                     id: "3",
                     title: "行业方案",
-                    path: "/"
+                    path: "/successcases"
                 },
                 {
                     id: "4",
                     title: "成功案例",
-                    path: "/"
+                    path: "/industrysolutions"
                 },
                 {
                     id: "5",

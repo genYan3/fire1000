@@ -3,6 +3,9 @@ import VueRouter from 'vue-router'
 import HomeView from '@/views/HomeView'
 import Home from '@/views/Home'
 import AL from '@/views/AI'
+import IndustrySolutions from '../components/IndustrySolutions.vue'
+import SuccessCases from '../components/SuccessCases.vue'
+
 
 Vue.use(VueRouter)
 
@@ -18,7 +21,9 @@ const routes = [
       {
         path:'ai',
         component:AL
-      }
+      },
+      {path: 'industrysolutions', name: 'industrysolutions', component: IndustrySolutions},
+      {path: 'successcases', name: 'successcases', component: SuccessCases},
     ]
   },
 ]
