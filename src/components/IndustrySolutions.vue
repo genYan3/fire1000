@@ -90,10 +90,10 @@
                 <img src="../assets/img/数字训练1.jpg" alt=""  width="40%">
               </div>
               <div class="DTIMGTOW">
-                <img src="../assets/img/数字训练2.png" alt="" width="46%">
+                <img src="../assets/img/数字训练2.png" alt="" width="42%">
               </div>
               <div class="DTIMGTHREE">
-                <img src="../assets/img/数字训练3.png" alt="" width="60%">
+                <img src="../assets/img/数字训练3.png" alt="" width="69%">
               </div>
             </div>
             <div  class="DigitaltrainingsystemText">
@@ -186,7 +186,7 @@ export default {
     position: relative;
   }
   .el-row{
-    height: 3300px;
+    height: 3050px;
     width: 100%;
   }
   .boxOne{
@@ -394,17 +394,17 @@ export default {
   .DTIMGTOW{
     position: absolute;
     left: 27%;
-    margin-top: 1.6%;
+    margin-top: 2%;
   }
   .DTIMGTHREE{
     position: absolute;
-    margin-top: 1.6%;
-    left: 57%;
+    margin-top: 2%;
+    left: 58%;
   }
   .DigitaltrainingsystemText{
     width: 100%;
     height: 50%;
-    margin-top: 30%;
+    margin-top: 28%;
   }
   .DigitaltrainingsystemTitle{
     text-align: center;
