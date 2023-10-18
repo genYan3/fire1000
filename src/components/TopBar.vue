@@ -44,7 +44,7 @@ export default {
                 {
                     id: "5",
                     title: "关于我们",
-                    path: "/"
+                    path: "/aboutus"
                 }
             ],
             AutoInput: "",
