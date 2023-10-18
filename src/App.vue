@@ -24,17 +24,23 @@ export default {
         }
     },
     created() {
-        let index = localStorage.getItem("index")
-        if (index) {
-            let hrefStr = location.href.split("/")
-            console.log(hrefStr[hrefStr.length-1] ==="",this.$store.state.index);
-            if (hrefStr[hrefStr.length-1] === "") {
-                this.$store.commit("setIndex", "1")
-                this.subLocalStorage()
-            }else this.$store.commit("setIndex", JSON.parse(index))
-        }
+        let index = sessionStorage.getItem("index")
+        // if (index) {
+        //     let hrefStr = location.href.split("/")
+        //     console.log(hrefStr[hrefStr.length-1] ==="",this.$store.state.index);
+        //     if (hrefStr[hrefStr.length-1] === "") {
+        //         this.$store.commit("setIndex", "1")
+        //         this.subLocalStorage()
+        //     }else this.$store.commit("setIndex", JSON.parse(index))
+        // }
+        let hrefStr = location.href.split("/")
+        // console.log(hrefStr[hrefStr.length - 1] === "", this.$store.state.index);
+        if (hrefStr[hrefStr.length - 1] === "") {
+            this.$store.commit("setIndex", "1")
+        } else this.$store.commit("setIndex", JSON.parse(index))
         window.addEventListener("beforeunload", () => {
-            this.subLocalStorage()
+            // this.subLocalStorage()
+            sessionStorage.setItem("index", JSON.stringify(this.$store.state.index))
         })
     },
 };

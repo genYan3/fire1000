@@ -18,7 +18,7 @@
 <script>
 import axios from 'axios';
 export default {
-    name: "aboutus",
+    name: "AboutUS",
     data() {
         return {
         
