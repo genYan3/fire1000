@@ -186,7 +186,7 @@ export default {
     position: relative;
   }
   .el-row{
-    height: 3050px;
+    height: 80%;
     width: 100%;
   }
   .boxOne{
@@ -299,6 +299,7 @@ export default {
   .InteractivePushMain{
     width: 60%;
     height: 100%;
+    padding-right: 5%;
   }
   .InteractivePushTitle{
     text-align: center;
@@ -341,7 +342,7 @@ export default {
   }
   .cheshiyuan{
     width: 27.8%;
-    height: 68%;
+    height: 69%;
     background-color: #fff;
     position: absolute;
     top: 35%;
@@ -362,7 +363,7 @@ export default {
     font-size: 18px;
     position: absolute;
     top: 20%;
-    left: 34%;
+    left: 32%;
     margin: 0;
     color: white;
 
@@ -371,7 +372,7 @@ export default {
     font-size: 18px;
     position: absolute;
     top: 45%;
-    left: 34%;
+    left: 32%;
     color: white;
 
     margin: 0;
@@ -436,6 +437,7 @@ export default {
   .InteractiveRockClimbingText{
     width: 50%;
     height: 100%;
+    padding-left: 5%;
   }
   .InteractiveRockClimbingTitle{
     text-align: center;
@@ -458,6 +460,7 @@ export default {
   .InteractiveMagicWallText{
     width: 60%;
     height: 100%;
+    padding-right: 5%;
   }
   .InteractiveMagicWallTitle{
     text-align: center;
