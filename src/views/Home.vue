@@ -5,10 +5,10 @@
             <el-image :src="mainImg"></el-image>
             <div class="homeImgTest">
                 <h1>
-                    <span v-for="item in h1Test">{{ item }}</span>
+                    <span v-for="(item,index) in h1Test" :key="index">{{ item }}</span>
                 </h1>
                 <h3>
-                    <span v-for="item in h2Test">{{ item }}</span>
+                    <span v-for="(item,index) in h2Test" :key="index">{{ item }}</span>
                 </h3>
                 <span class="contactUs"><a href="">联系我们</a></span>
             </div>
@@ -31,11 +31,11 @@
                         <p style="margin-bottom: 15px;color:burlywood;">{{ applyObj.name }}</p>
                         <p>产品技术</p>
                         <p style="text-indent: 30px;margin: 15px 0;">
-                            <span v-for=" test in applyObj.productTechology" style="margin-right: 10px;">
+                            <span v-for=" test,index in applyObj.productTechology" :key="index" style="margin-right: 10px;">
                                 {{ test }}</span>
                         </p>
                         <p style="margin: 25px 0;">成功案例</p>
-                        <p style="text-indent: 30px;"><span style="margin-right: 10px;" v-for="Case in applyObj.case">{{
+                        <p style="text-indent: 30px;"><span style="margin-right: 10px;" v-for="Case,index in applyObj.case" :key="index">{{
                                 Case }}{{ applyObj.id }}</span></p>
                     </div>
                 </div>
@@ -98,7 +98,7 @@
 
 <script>
 export default {
-    name: "Home",
+    name: "HomeIndex",
     data() {
         return {
             mainImg: "https://www.extremevision.com.cn/uploadfile/file/20230428/1682653146711119.jpg",
@@ -194,7 +194,10 @@ export default {
     },
     mounted() {
         this.applyObj = this.productList[0]
-    }
+        // window.addEventListener("load", () => {
+        //     this.$store.commit("setIndex", "1")
+        // })
+    },
 }
 </script>
 
