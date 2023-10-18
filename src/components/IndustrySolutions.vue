@@ -90,10 +90,10 @@
                 <img src="../assets/img/数字训练1.jpg" alt=""  width="40%">
               </div>
               <div class="DTIMGTOW">
-                <img src="../assets/img/数字训练2.png" alt="" width="46%">
+                <img src="../assets/img/数字训练2.png" alt="" width="42%">
               </div>
               <div class="DTIMGTHREE">
-                <img src="../assets/img/数字训练3.png" alt="" width="60%">
+                <img src="../assets/img/数字训练3.png" alt="" width="69%">
               </div>
             </div>
             <div  class="DigitaltrainingsystemText">
@@ -186,7 +186,7 @@ export default {
     position: relative;
   }
   .el-row{
-    height: 3300px;
+    height: 80%;
     width: 100%;
   }
   .boxOne{
@@ -299,6 +299,7 @@ export default {
   .InteractivePushMain{
     width: 60%;
     height: 100%;
+    padding-right: 5%;
   }
   .InteractivePushTitle{
     text-align: center;
@@ -341,7 +342,7 @@ export default {
   }
   .cheshiyuan{
     width: 27.8%;
-    height: 68%;
+    height: 69%;
     background-color: #fff;
     position: absolute;
     top: 35%;
@@ -362,7 +363,7 @@ export default {
     font-size: 18px;
     position: absolute;
     top: 20%;
-    left: 34%;
+    left: 32%;
     margin: 0;
     color: white;
 
@@ -371,7 +372,7 @@ export default {
     font-size: 18px;
     position: absolute;
     top: 45%;
-    left: 34%;
+    left: 32%;
     color: white;
 
     margin: 0;
@@ -394,17 +395,17 @@ export default {
   .DTIMGTOW{
     position: absolute;
     left: 27%;
-    margin-top: 1.6%;
+    margin-top: 2%;
   }
   .DTIMGTHREE{
     position: absolute;
-    margin-top: 1.6%;
-    left: 57%;
+    margin-top: 2%;
+    left: 58%;
   }
   .DigitaltrainingsystemText{
     width: 100%;
     height: 50%;
-    margin-top: 30%;
+    margin-top: 28%;
   }
   .DigitaltrainingsystemTitle{
     text-align: center;
@@ -436,6 +437,7 @@ export default {
   .InteractiveRockClimbingText{
     width: 50%;
     height: 100%;
+    padding-left: 5%;
   }
   .InteractiveRockClimbingTitle{
     text-align: center;
@@ -458,6 +460,7 @@ export default {
   .InteractiveMagicWallText{
     width: 60%;
     height: 100%;
+    padding-right: 5%;
   }
   .InteractiveMagicWallTitle{
     text-align: center;
