@@ -16,7 +16,7 @@ export default {
 
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 #bottom{
     text-align: center;
     width:100%;

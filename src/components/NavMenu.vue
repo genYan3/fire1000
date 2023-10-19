@@ -1,46 +1,43 @@
 <!-- eslint-disable vue/valid-v-for -->
 <template>
-  <div class="Navmenu">
+<div class="Navmenu">
     <el-menu :default-active="active" mode="horizontal">
-      <template v-for="menu in menuList" >
-        <el-menu-item
-          :index="menu.id"
-          :name="menu.id"
-          :path="menu.path"
-          @click="$emit('topClick', $event)"
-          >{{ menu.title }}</el-menu-item
-        >
-      </template>
+        <template v-for="menu in menuList">
+            <el-menu-item :index="menu.index" :name="menu.index" :path="menu.path" @click="$emit('topClick', $event)" :id="menu.id">{{ menu.title }}</el-menu-item>
+        </template>
     </el-menu>
-  </div>
+</div>
 </template>
+
 <script>
 export default {
-  name: "NavMenu",
-  data() {
-    return {
-      active: this.activeValue
-    };
-  },
-  props: {
-    menuList: Array,
-    activeValue:String
-  },
-  created() {},
+    name: "NavMenu",
+    data() {
+        return {
+            active: this.activeValue
+        };
+    },
+    props: {
+        menuList: Array,
+        activeValue: String
+    },
+    created() {},
+    mounted() {
+    },
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .el-menu {
-  border: none !important;
+    border: none !important;
 }
 
 .Navmenu .el-menu-item:not(.is-disabled):hover {
-  border-bottom: 2px solid #409eff !important;
+    border-bottom: 2px solid #409eff !important;
 }
 
 .el-menu-item {
-  width: 110px !important;
-  text-align: center !important;
+    width: 110px !important;
+    text-align: center !important;
 }
 </style>
