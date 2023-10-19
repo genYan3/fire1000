@@ -6,7 +6,7 @@
                 <div class="boxOne">
                     <h1 class="textOne">诚信 专业 合作 共赢</h1>
                     <div class="textTow">专业化、科学化、人性化</div>
-                    <a href="#/industrysolutions">
+                    <a href="/aboutus">
                        <div class="a">
                             <span class="textThree">联系我们</span>
                       </div> 
@@ -25,7 +25,7 @@
                   height: 1px;
                   background-color: grey;
                   margin-top: 26px;"></div>
-              <div>
+              <div style="font-family: SimSun; font-weight: 600">
                   产品案例
               </div>
               <div style="
@@ -93,7 +93,7 @@
                 <img src="../assets/img/数字训练2.png" alt="" width="42%">
               </div>
               <div class="DTIMGTHREE">
-                <img src="../assets/img/数字训练3.png" alt="" width="69%">
+                <img src="../assets/img/数字训练3.png" alt="" width="61%">
               </div>
             </div>
             <div  class="DigitaltrainingsystemText">

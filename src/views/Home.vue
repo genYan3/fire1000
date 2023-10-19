@@ -10,7 +10,7 @@
                 <h3>
                     <span v-for="(item,index) in h2Test" :key="index">{{ item }}</span>
                 </h3>
-                <span class="contactUs"><a href="">联系我们</a></span>
+                <span class="contactUs"><a href="/aboutus">联系我们</a></span>
             </div>
         </el-col>
     </el-row>

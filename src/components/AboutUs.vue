@@ -12,6 +12,7 @@
             <div class="title">
                 <p class="p1">联系我们</p>
                 <p class="p2">contact information</p>
+                <p class="yangshixian"></p>
             </div>
             <div class="icon">
                 <el-row>
@@ -47,12 +48,7 @@
                     <el-col :span="4"><div class="grid-content bg-purple-light">&nbsp;</div></el-col>
                 </el-row>
             </div>
-            <div>
-
-            </div>
-        </div>
-        <div class="map">
-
+            
         </div>
     </div>
 </template>
@@ -130,7 +126,7 @@ export default {
     width: 100%;
     height: 10%;
     text-align: center;
-    margin: 8% 0 4% 0;
+    margin: 4% 0 4% 0;
 }
 .p1{
     font-size: 22px;
@@ -141,6 +137,7 @@ export default {
     font-size: 18px;
     font-family: SimSun;
     color: #999999;
+    margin-top: 0.5%;
 }
 .icon{
     width: 100%;
@@ -163,10 +160,11 @@ export default {
     border-radius: 50%;
     margin: auto;
 }
-.map{
-    width: 100%;
-    height: 30%;
-    background-color: #2ddac2;
-    margin: 5% 0 5% 0;
+.yangshixian{
+    width: 40px;
+    height: 0px;
+    border:1px solid #556ede;
+    margin: auto;
+    margin-top: 0.8%;
 }
 </style>

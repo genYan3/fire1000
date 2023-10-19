@@ -5,7 +5,7 @@
                 <div class="boxOne">
                     <h1 class="textOne">诚信 专业 合作 共赢</h1>
                     <div class="textTow">专业化、科学化、人性化</div>
-                    <a href="">
+                    <a href="/aboutus">
                        <div class="a">
                             <span class="textThree">联系我们</span>
                         </div> 
@@ -23,7 +23,7 @@
                                     height: 1px;
                                     background-color: grey;
                                     margin-top: 26px;"></div>
-                                <div>
+                                <div style="font-family: SimSun; font-weight: 600;">
                                     行业方案
                                 </div>
                                 <div style="
@@ -32,7 +32,7 @@
                                     background-color: grey;
                                     margin-top: 26px;"></div>
                             </div>
-                            <div>
+                            <div class="lunbotu">
                                 <el-carousel :interval="8000" type="card" height="400px" v-model="activeIndex"  @change="changeIn">
                                     <el-carousel-item v-for="(item, index) in carouselItems" :key="index" >
                                         <img :src="carouselItems[activeIndex].image" alt="">
@@ -176,6 +176,7 @@ export default {
     height: 400px;
     text-align: center;
     color: #fff;
+    margin-top: 2%;
   }
   .a {
         display: inline-block;
@@ -244,6 +245,9 @@ export default {
     font-size: 40px;
     display: flex;
     justify-content: center;
+}
+.lunbotu{
+    margin-top: 2%;
 }
 .main_content{
     padding: 16px 0;
