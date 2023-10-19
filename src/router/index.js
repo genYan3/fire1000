@@ -5,7 +5,7 @@ import Home from '@/views/Home'
 import AL from '@/views/AI'
 import IndustrySolutions from '../components/IndustrySolutions.vue'
 import SuccessCases from '../components/SuccessCases.vue'
-
+import AboutUs from '@/components/AboutUs'
 
 Vue.use(VueRouter)
 
@@ -24,6 +24,7 @@ const routes = [
       },
       {path: 'industrysolutions', name: 'industrysolutions', component: IndustrySolutions},
       {path: 'successcases', name: 'successcases', component: SuccessCases},
+      {path:"aboutus",component:AboutUs}
     ]
   },
 ]
