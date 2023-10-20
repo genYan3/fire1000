@@ -39,56 +39,54 @@
                     </div>
                     <div class="productadvantages">
                         <h2>产品优势</h2>
-                        <div class="productadvantages_main">
-                            <div class="productadvantages_mainTextOne">
-                                <h3>超灵活</h3>
-                                <p>轻盈小巧功耗低，通电即用</p>
-                                <p>算法DIY组合，应用场景广泛</p>
-                                <p>个性化策略配置，多算法报警结果融合</p>
+                        <div class="productadvantages_main" >
+                            <div class="productadvantages_main_div" v-for="item in productadvantages" :key="item.id">
+                                <div class="productadvantages_mainTextOne">
+                                    <h3>{{ item.title }}</h3>
+                                    <p>{{ item.textOne }}</p>
+                                    <p>{{ item.textTwo }}</p>
+                                    <p>{{ item.textThree }}</p>
+                                </div>
                             </div>
-                            <div class="productadvantages_mainTextOne">
-                                <h3>超省事</h3>
-                                <p>内置算法及应用，无需搭建运行环境</p>
-                                <p>开箱即用，无需改变原有组网方式</p>
-                                <p>支持市场主流网络IPC标准协议接入</p>
-                            </div>
-                            <div class="productadvantages_mainTextOne">
-                                <h3>超智能</h3>
-                                <p>算法自定义组合，应用场景广泛</p>
-                                <p>高抓拍率、高准确率、低误报率智能算法</p>
-                                <p>自定义分析结果上传至第三方系统</p>
-                            </div>
-                            <div class="productadvantages_mainTextOne">
-                                <h3>超安全</h3>
-                                <p>硬件加密，算法管控，双重保障</p>
-                                <p>数据存储期限你来定，过期自动删</p>
-                                <p>HTTPS 模式下，数据一样安全推送</p>
-                            </div>
+                            
                         </div>
                     </div>
                     <div class="PlatformHighlights">
                         <div class="PlatformHighlights_icon">
                             <h2>平台亮点</h2>
-                            <div class="PlatformHighlights_iconMain">
-                                <img src="" alt="图标">
-                                <div>预警信息</div>
+                            <div class="PlatformHighlights_iconFont">
+                                <div class="PlatformHighlights_iconMain" v-for="item in PlatformHighlights "  @mouseenter="productMouseMove" :key="item.id" :id="item.id">
+                                    <el-image :src="item.imgIcon" class="PlatformHighlights_Icon"></el-image>
+                                    <div class="PlatformHighlights_iconMain_p">{{ item.title }}</div>
+                                </div>
                             </div>
+                            
                         </div>
                         <div class="PlatformHighlights_img">
-                            <img src="" alt="">
-                            <div class="PlatformHighlights_imgOne">
-                                预警信息
-                            </div>
-                            <div class="PlatformHighlights_imgTow">
-                                支持全量算法报警事件信息查询，丰富的筛选条件以及批量的数据操作，满足事件的处理及业务的联动
+                            <img :src="applyObj.img" alt="">
+                        </div>
+                    </div>
+                    <div class="ApplicationScenario">
+                        <h2>
+                            应用场景
+                        </h2>
+                        <div class="ApplicationScenario_Main" >
+                            <div class="ApplicationScenario_MainOne" v-for="item in ApplicationScenario" :key="item.id">
+                                <img :src="item.img" alt="">
+                                <p>{{ item.text }}</p>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        
-                    </div>
-                    <div>
-
+                    <div class="technicalspecifications">
+                        <h2>
+                            技术规格
+                        </h2>
+                        <div class="technicalspecifications_main" >
+                            <div class="technicalspecifications_Text" v-for="item in technicalspecifications" :key="item.id">
+                                <p class="technicalspecifications_p1">{{ item.name }}</p>
+                                <p class="technicalspecifications_p2">{{ item.text }}</p>
+                            </div>
+                        </div>
                     </div>
                 </div></el-col>
                 <el-col :span="2"><div>&nbsp;</div></el-col>
@@ -99,14 +97,129 @@
 
 <script>
     export default {
-        name: "aiedgebox",
-        data() {
-            return {
-
-            }
-        }
-    }
-
+  name: "aiedgebox",
+  data() {
+    return {
+        productadvantages:[{
+            id:1,
+            title: "超灵活",
+            textOne: "轻盈小巧功耗低，通电即用",
+            textTwo: "算法DIY组合，应用场景广泛",
+            textThree: "个性化策略配置，多算法报警结果融合",
+        },
+        {
+            id:2,
+            title: "超省事",
+            textOne: "内置算法及应用，无需搭建运行环境",
+            textTwo: "开箱即用，无需改变原有组网方式",
+            textThree: "支持市场主流网络IPC标准协议接入",
+        },
+        {
+            id:3,
+            title: "超智能",
+            textOne: "算法自定义组合，应用场景广泛",
+            textTwo: "高抓拍率、高准确率、低误报率智能算法",
+            textThree: "自定义分析结果上传至第三方系统",
+        },
+        {
+            id:4,
+            title: "超安全",
+            textOne: "硬件加密，算法管控，双重保障",
+            textTwo: "数据存储期限你来定，过期自动删",
+            textThree: "HTTPS 模式下，数据一样安全推送",
+        },],
+      PlatformHighlights: [
+        {
+          id: 1,
+          imgIcon: "",
+          title: "标题一",
+          img: "",
+          details: "详细内容1",
+        },
+        {
+          id: 2,
+          imgIcon: "",
+          title: "标题二",
+          img: "",
+          details: "详细内容2",
+        },
+        {
+          id: 3,
+          imgIcon: "",
+          title: "标题三",
+          img: "",
+          details: "详细内容3",
+        },
+        {
+          id: 4,
+          imgIcon: "",
+          title: "标题四",
+          img: "",
+          details: "详细内容4",
+        },
+        {
+          id: 5,
+          imgIcon: "",
+          title: "标题五",
+          img: "",
+          details: "详细内容5",
+        },
+        {
+          id: 6,
+          imgIcon: "",
+          title: "标题六",
+          img: "",
+          details: "详细内容6",
+        },
+      ],
+      ApplicationScenario:[{
+        id:1,
+        img: "",
+        text: "智慧安监",
+      },{
+        id:2,
+        img: "",
+        text: "智慧工地",
+      },
+      {
+        id:3,
+        img: "",
+        text: "明厨亮灶",
+      },
+      {
+        id:4,
+        img: "",
+        text: "智慧油站/充电站",
+      },
+      {
+        id:5,
+        img: "",
+        text: "DIY场景",
+      }],
+      technicalspecifications:[{
+        id:1,
+        name:"产品名称",
+        text:"智能AI边缘盒子",
+      },{
+        id:2,
+        name:"核心",
+        text:"英伟达NX核心",
+      },],
+      applyObj: {},
+    };
+  },
+  methods: {
+    productMouseMove(event) {
+      let obj = this.PlatformHighlights.filter((item) => {
+        return item.id.toString() === event.target.id;
+      });
+      this.applyObj = obj[0];
+    },
+  },
+  mounted() {
+    this.applyObj = this.PlatformHighlights[0];
+  },
+};
 </script>
 
 <style scoped lang="less">
@@ -225,7 +338,7 @@
     .productintroduction{
         width: 100%;
         height: 20%;
-        margin-bottom: 5%;
+        margin-bottom: 2.5%;
         h2{
             font-size: 35px;
             font-weight: 800;
@@ -272,7 +385,7 @@
 .productadvantages{
     width: 100%;
     height: 10%;
-    padding: 2.5% 2.5% 5%;
+    padding: 2.5% ;
     h2{
         font-size: 35px;
         font-weight: 800;
@@ -282,8 +395,7 @@
         width: 100%;
         height: 80%;
         display: flex;
-        
-        justify-content: space-between;
+       justify-content: space-between;
         .productadvantages_mainTextOne{
             padding: 2% 1%;
             border: 1xp;
@@ -305,6 +417,7 @@
 .PlatformHighlights{
     width: 100%;
     height: 20%;
+    margin-bottom: 5%;
     display: flex;
     .PlatformHighlights_icon{
         width: 42%;
@@ -315,6 +428,97 @@
             font-weight: 800;
             padding: 2% 0 1%;
         }
+        .PlatformHighlights_iconFont{
+            width: 40%;
+            height: 30%;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 2% 0 0 0;
+            .PlatformHighlights_iconMain{
+            margin: auto;
+            text-align: center;
+            padding: 3%;
+            .PlatformHighlights_iconMain_p{
+                color: #475669;
+                font-size: 14px;
+                padding: 1% 0 3%;
+            }
+        }
+        }
+        
     }
+    .PlatformHighlights_img{
+        width: 55%;
+        height: 100%;
+        img{
+            width: 100%;
+            z-index: -1;
+        }
+    }
+}
+.ApplicationScenario{
+    width: 100%;
+    height: 10%;
+    margin-bottom: 5%;
+    h2{
+        font-size: 35px;
+        font-weight: 800;
+        margin: 2% 0 1%;
+    }
+    .ApplicationScenario_Main{
+        width: 100%;
+        height: 80%;
+        display: flex;
+        justify-content: space-between;
+        .ApplicationScenario_MainOne{
+            width: 20%;
+            height: 100%;
+            margin: 1.5%;
+            img{
+                width: 100%;
+                height: 70%;
+            }
+            p{
+                width: 100%;
+                height: 30%;
+                font-size: 14px;
+                padding: 1% 0 3%;
+            }
+       }
+    }
+}
+.technicalspecifications{
+    width: 100%;
+    height: 30%;
+    margin-bottom: 5%;
+    h2{
+        font-size: 35px;
+        font-weight: 800;
+        margin: 2% 0 1%;
+    }
+    .technicalspecifications_main{
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-wrap: wrap;
+       .technicalspecifications_Text{
+        width: 45%;
+        height: 10%;
+        padding: 2.5%;
+        display: flex;
+        border-bottom: 1px solid #f2f2f2;
+        .technicalspecifications_p1{
+            width: 30%;
+            height: 100%;
+            padding-right: 5%;
+        }
+        .technicalspecifications_p2{
+            width: 65%;
+            height: 100%;
+            color: #666666;
+        }
+       }
+    }
+
 }
 </style>
