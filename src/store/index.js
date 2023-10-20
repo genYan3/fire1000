@@ -94,10 +94,25 @@ const CoreDataModeles = {
   },
   modules: {}
 }
+
+const IndustrySolutionsHoverMoudeles = {
+    state:{
+      IndustrySolutionsHoverData:[
+        "城管AI算法方案","交通AI算法方案","工业AI算法方案","矿山AI算法方案",
+        "工地AI算法方案","园区算法方案","安防算法方案","亮灶算法方案","零售算法方案",
+        "水务AI算法方案","加油站算法方案","新能源算法方案"
+      ]
+    },
+    getters:{},
+    mutations:{},
+    actions:{},
+    modules:{}
+}
 export default new Vuex.Store({
   state: {
     index: "1",
-    isRemove:true
+    isRemove:true,
+    isXdfa:true
   },
   getters: {
   },
@@ -107,11 +122,15 @@ export default new Vuex.Store({
     },
     setIsRemover(state,value){
       state.isRemove = value
+    },
+    setIsXdfa(state,value){
+      state.isXdfa = value
     }
   },
   actions: {
   },
   modules: {
-    CoreData: CoreDataModeles
+    CoreData: CoreDataModeles,
+    ISHData:IndustrySolutionsHoverMoudeles
   }
 })
