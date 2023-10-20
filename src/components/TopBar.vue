@@ -39,7 +39,7 @@ export default {
                 {
                     id: "4",
                     title: "成功案例",
-                    path: "/industrysolutions"
+                    path: "/"
                 },
                 {
                     id: "5",
