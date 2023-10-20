@@ -16,7 +16,6 @@
             </el-col>
         </el-row>
     </el-card>
-    </el-row>
 </div>
 </template>
 

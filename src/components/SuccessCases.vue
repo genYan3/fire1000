@@ -23,20 +23,10 @@
                                 </h2>
                             </div>
                             <div class="boxOne_text">
-                                <div class="boxOne_textOne">
-                                    <h3>小标题1</h3>
-                                    <p>小标题1内容1</p>
-                                    <p>小标题1内容2</p>
-                                </div>
-                                <div class="boxOne_textTow">
-                                    <h3>小标题2</h3>
-                                    <p>小标题2内容1</p>
-                                    <p>小标题2内容2</p>
-                                </div>
-                                <div class="boxOne_textThree">
-                                    <h3>小标题3</h3>
-                                    <p>小标题3内容1</p>
-                                    <p>小标题3内容2</p>
+                                <div class="boxOne_textOne" v-for="item in boxOne" :key="item.id">
+                                    <h3>{{item.title}}</h3>
+                                    <p>{{ item.textOne }}</p>
+                                    <p>{{ item.textTow }}</p>
                                 </div>
                             </div>
                         </div>
@@ -53,24 +43,14 @@
                         <div class="boxThree">
                             <h2>大标题3</h2>
                             <div class="boxThree_main">
-                                <div class="boxThree_mainOne">
+                                <div class="boxThree_mainOne" v-for="item in boxThree" :key="item.id">
                                     <div>
-                                        <h3>大标题3小标题1</h3>
-                                        <p>大标题3内容1</p>
-                                        <p>大标题3内容2</p>
+                                        <h3>{{ item.title}}</h3>
+                                        <p>{{ item.textOne}}</p>
+                                        <p>{{ item.textTow}}</p>
                                     </div>
                                     <div>
-                                        <img src="" alt="大标题3图片1">
-                                    </div>
-                                </div>
-                                <div  class="boxThree_mainTow">
-                                    <div>
-                                        <h3>大标题3小标题2</h3>
-                                        <p>大标题3内容3</p>
-                                        <p>大标题3内容4</p>
-                                    </div>
-                                    <div>
-                                        <img src="" alt="大标题3图片2">
+                                        <img :src="item.img" alt="大标题3图片">
                                     </div>
                                 </div>
                             </div>
@@ -78,98 +58,46 @@
                         <div class="boxFour">
                             <h2>大标题4</h2>
                             <div class="boxFour_main">
-                                <div class="boxFour_mainOne">
+                                <div class="boxFour_mainOne" v-for="item in boxFour" :key="item.id">
                                     <div class="boxFour_mainOne_img">
-                                        <img src="" alt="大标题4图片1">
+                                        <img :src="item.img" alt="大标题4图片">
                                     </div>
-                                    <h3>大标题4小标题1</h3>
-                                    <p>大标题4小标题1内容</p>
-                                </div>
-                                <div class="boxFour_mainTow">
-                                    <div class="boxFour_mainTow_img">
-                                        <img src="" alt="大标题4图片2">
-                                    </div>
-                                    <h3>大标题4小标题2</h3>
-                                    <p>大标题4小标题2内容</p>
-                                </div>
-                                <div class="boxFour_mainThree">
-                                    <div class="boxFour_mainThree_img">
-                                        <img src="" alt="大标题4图片3">
-                                    </div>
-                                    <h3>大标题4小标题3</h3>
-                                    <p>大标题4小标题3内容</p>
+                                    <h3>{{item.title}}</h3>
+                                    <p>{{ item.textOne }}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="boxFive">
                             <div class="boxFive_icon">
                                 <h2>大标题5</h2>
-                                <div class="boxFive_iconMain">
-                                    <div class="boxFive_iconMain_One">
-                                        <img src="" alt="图标1">
-                                        <p>大标题5小标题1</p>
+                                <div class="boxFive_iconMain" >
+                                    <div v-for="item in boxFive" :key="item.id" >
+                                        <div class="boxFive_iconMain_One">
+                                            <el-image :src="item.imgIcon" alt="图标1"></el-image>
+                                            <p>{{ item.title }}</p>
+                                        </div>
                                     </div>
-                                    <div class="boxFive_iconMain_Tow">
-                                        <img src="" alt="图标2">
-                                        <p>大标题5小标题2</p>
-                                    </div>
-                                    <div class="boxFive_iconMain_Three">
-                                        <img src="" alt="图标3">
-                                        <p>大标题5小标题3</p>
-                                    </div>
+                                    
+                                    
                                 </div>
                             </div>
                             <div class="boxFive_img">
-                                <img src="" alt="随小标题变动而变动">
+                                <img src="  " alt="随小标题变动而变动">
                             </div>
                         </div>
                         <div class="boxSix">
                             <h2>大标题6</h2>
                             <div class="boxSix_main">
-                                <div class="boxSix_mainOne">
-                                    <img src="" alt="大标题6图标1">
-                                    <h3>
-                                        大标题6标题1
-                                    </h3>
-                                    <p>
-                                        大标题6标题1内容
-                                    </p>
-                                </div>
-                                <div class="boxSix_mainOne">
-                                    <img src="" alt="大标题6图标2">
-                                    <h3>
-                                        大标题6标题2
-                                    </h3>
-                                    <p>
-                                        大标题6标题2内容
-                                    </p>
-                                </div>
-                                <div class="boxSix_mainOne">
-                                    <img src="" alt="大标题6图标3">
-                                    <h3>
-                                        大标题6标题3
-                                    </h3>
-                                    <p>
-                                        大标题6标题3内容
-                                    </p>
-                                </div>
-                                <div class="boxSix_mainOne">
-                                    <img src="" alt="大标题6图标4">
-                                    <h3>
-                                        大标题6标题4
-                                    </h3>
-                                    <p>
-                                        大标题6标题4内容
-                                    </p>
-                                </div>
-                                <div class="boxSix_mainOne">
-                                    <img src="" alt="大标题6图标5">
-                                    <h3>
-                                        大标题6标题5
-                                    </h3>
-                                    <p>
-                                        大标题6标题5内容
-                                    </p>
+                                <div class="boxSix_mainOne" v-for="item in boxSix" :key="item.id">
+                                    <div >
+                                        <img :src="item.imgIcon" alt="大标题6图标">
+                                        <h3>
+                                            {{item.title}}
+                                        </h3>
+                                        <p>
+                                            {{item.text}}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -189,7 +117,98 @@ export default {
   data() {
     return {
         msg: this.msg,
-        
+        boxOne:[{
+            id:1,
+            title:"小标题1",
+            textOne: "小标题1内容1",
+            textTow:"小标题1内容2"
+        },
+        {
+            id:2,
+            title:"小标题2",
+            textOne: "小标题2内容1",
+            textTow:"小标题2内容2"
+        },
+        {
+            id:3,
+            title:"小标题3",
+            textOne: "小标题3内容1",
+            textTow:"小标题3内容2"
+        }],
+        boxThree:[{
+            id:1,
+            title:"大标题3标题1",
+            textOne: "大标题3内容1",
+            textTow:"大标题3内容2",
+            img:""
+        },
+        {
+            id:2,
+            title:"大标题3标题2",
+            textOne: "大标题3内容1",
+            textTow:"大标题3内容2",
+            img:""
+        },
+        ],
+        boxFour:[{
+            id:1,
+            title:"大标题4标题1",
+            textOne: "大标题4内容1",
+            img:""
+        },{
+            id:2,
+            title:"大标题4标题2",
+            textOne: "大标题4内容2",
+            img:""
+        },{
+            id:3,
+            title:"大标题4标题3",
+            textOne: "大标题4内容3",
+            img:""
+        }],
+        boxFive:[{
+            id:1,
+            img:"",
+            title:"小标题1",
+            imgIcon:""
+        },{
+            id:2,
+            img:"",
+            title:"小标题2",
+            imgIcon:""
+        },{
+            id:3,
+            img:"",
+            title:"小标题3",
+            imgIcon:""
+        }],
+        boxSix:[{
+            id:1,
+            title:"小标题1",
+            text:"小标题1内容",
+            imgIcon:""
+        },
+        {
+            id:2,
+            title:"小标题2",
+            text:"小标题2内容",
+            imgIcon:""
+        },{
+            id:3,
+            title:"小标题3",
+            text:"小标题3内容",
+            imgIcon:""
+        },{
+            id:4,
+            title:"小标题4",
+            text:"小标题4内容",
+            imgIcon:""
+        },{
+            id:5,
+            title:"小标题5",
+            text:"小标题5内容",
+            imgIcon:""
+        }]
         
     }
   },
@@ -381,40 +400,7 @@ export default {
         padding: 3px 0;
     }
 }
-.boxOne_textTow{
-    background: #f5f9ff;
-    width: 35%;
-    height: 7%;
-    margin: 0.75%;
-    padding: 0.75%;
-    h3{
-        color: #333333;
-        font-size: 18px;
-        font-weight: 800;
-    }
-    p{
-        color: #666666;
-        font-size: 14px;
-        padding: 3px 0;
-    }
-}
-.boxOne_textThree{
-    background: #f5f9ff;
-    width: 30%;
-    height: 7%;
-    margin: 0.75%;
-    padding: 0.75%;
-    h3{
-        color: #333333;
-        font-size: 18px;
-        font-weight: 800;
-    }
-    p{
-        color: #666666;
-        font-size: 14px;
-        padding: 3px 0;
-    }
-}
+
 .boxTow{
     width: 100%;
     height: 30%;
@@ -494,8 +480,8 @@ export default {
     .boxThree_mainOne{
         width: 45%;
         height: 95%;
-        padding: 2.5%;
-
+        padding: 1.25%;
+        margin: 1.25%;
         display: flex;
         
         h3{
@@ -509,23 +495,7 @@ export default {
             padding: 13px 0;
         }
     }
-    .boxThree_mainTow{
-        width: 45%;
-        height: 95%;
-        padding: 2.5%;
-
-        display: flex;
-        h3{
-            color: #333333;
-            font-size: 18px;
-            font-weight: 800;
-        }
-        p{
-            color: #666666;
-            font-size: 14px;
-            padding: 13px 0;
-        }
-    }
+    
 }
 .boxFour{
     width: 100%;
@@ -620,7 +590,7 @@ export default {
             height: 50%;
             display: flex;
             .boxFive_iconMain_One{
-                width: 30%;
+                width: 100%;
                 height: 100%;
                 margin: 1.5% 0;
                 border: 1px solid rgb(246,246,246);
@@ -634,37 +604,7 @@ export default {
                     padding: 1% 0;
                 }
             }
-            .boxFive_iconMain_Tow{
-                width: 30%;
-                height: 100%;
-                margin: 1.5% 0;
-                border: 1px solid rgb(246,246,246);
-                img{
-                    width: 40%;
-                    height: 40%;
-                    margin: auto;
-                }
-                p{
-                    font-size: 14px;
-                    padding: 1% 0;
-                }
-
-            }
-            .boxFive_iconMain_Three{
-                width: 30%;
-                height: 100%;
-                margin: 1.5% 0;
-                border: 1px solid rgb(246,246,246);
-                img{
-                    width: 40%;
-                    height: 40%;
-                    margin: auto;
-                }
-                p{
-                    font-size: 14px;
-                    padding: 1% 0;
-                }
-            }
+            
         }
     }
     .boxFive_img{
