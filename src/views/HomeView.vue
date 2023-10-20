@@ -13,12 +13,15 @@
             <BottomBar></BottomBar>
         </el-footer>
     </el-container>
+    <!-- 未实现拖拽移动和数据交互 -->
+    <OnlineConsultation id="OnlineConsultation" class="isShow onlineConsultationPosition"></OnlineConsultation>
 </div>
 </template>
 
 <script>
 import TopBar from '@/components/TopBar'
 import BottomBar from '@/components/BottomBar'
+import OnlineConsultation from '@/components/OnlineConsultation'
 export default {
     name: "HomeView",
     data() {
@@ -31,7 +34,8 @@ export default {
     },
     components: {
         TopBar,
-        BottomBar
+        BottomBar,
+        OnlineConsultation
     },
     mounted() {
 
@@ -40,5 +44,7 @@ export default {
 </script>
 
 <style lang="less">
-
+.isShow {
+    display: none;
+}
 </style>

@@ -93,12 +93,10 @@
         </el-col>
         <el-col :span="3">&nbsp;</el-col>
     </el-row>
-    <OnlineConsultation id="OnlineConsultation" class="isShow"></OnlineConsultation>
 </div>
 </template>
 
 <script>
-import OnlineConsultation from '@/components/OnlineConsultation'
 export default {
     name: "HomeIndex",
     data() {
@@ -201,7 +199,6 @@ export default {
         // })
     },
     components: {
-        OnlineConsultation,
     },
 }
 </script>
@@ -366,8 +363,5 @@ h3 span:last-child::after {
         margin-top: 15px;
         // text-align: right;
     }
-}
-.isShow{
-    display: none;
 }
 </style>

@@ -15,7 +15,12 @@ export default {
     },
 
     mounted() {
-
+        setTimeout(() => {
+            // 进入网页两秒后出现在线咨询模块
+            let isShowOnlineConsultation = document.getElementById("OnlineConsultation")
+            // console.log(isShowOnlineConsultation);
+            isShowOnlineConsultation.classList.remove("isShow")
+        }, 2000)
     },
 
     methods: {
@@ -42,12 +47,6 @@ export default {
             // this.subLocalStorage()
             sessionStorage.setItem("index", JSON.stringify(this.$store.state.index))
         })
-        setTimeout(()=>{
-            // 进入网页两秒后出现在线咨询模块
-            let isShowOnlineConsultation = document.getElementById("OnlineConsultation")
-            console.log(isShowOnlineConsultation.classList); 
-
-        },2000)
     },
 };
 </script>
