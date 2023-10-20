@@ -8,7 +8,7 @@
 export default {
     data() {
         return {
-            name:'AboutUs'
+            
 
         }
     },
@@ -16,7 +16,7 @@ export default {
 
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 #bottom{
     text-align: center;
     width:100%;

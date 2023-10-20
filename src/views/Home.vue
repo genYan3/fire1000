@@ -10,7 +10,7 @@
                 <h3>
                     <span v-for="(item,index) in h2Test" :key="index">{{ item }}</span>
                 </h3>
-                <span class="contactUs" @click="toMEOrSetIndex"><a href="/aboutus">联系我们</a></span>
+                <span class="contactUs"><a href="">联系我们</a></span>
             </div>
         </el-col>
     </el-row>
@@ -192,9 +192,6 @@ export default {
                 return item.id.toString() === even.target.id
             })
             this.applyObj = obj[0]
-        },
-        toMEOrSetIndex(){
-            this.$store.commit("setIndex","5")
         }
     },
     mounted() {
@@ -209,7 +206,7 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 .colPos .homeImgTest {
     position: absolute !important;
     top: 15%;

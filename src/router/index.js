@@ -3,9 +3,10 @@ import VueRouter from 'vue-router'
 import HomeView from '@/views/HomeView'
 import Home from '@/views/Home'
 import AL from '@/views/AI'
-import IndustrySolutions from '../components/IndustrySolutions.vue'
 import SuccessCases from '../components/SuccessCases.vue'
-import AboutUs from '@/components/AboutUs'
+import AboutUs from '../components/AboutUs.vue'
+import AIEdgeBox from '../components/AIEdgeBox.vue'
+
 
 Vue.use(VueRouter)
 
@@ -22,9 +23,11 @@ const routes = [
         path:'ai',
         component:AL
       },
-      {path: 'industrysolutions', name: 'industrysolutions', component: IndustrySolutions},
       {path: 'successcases', name: 'successcases', component: SuccessCases},
-      {path:"aboutus",component:AboutUs}
+      {path: 'aboutus',name :'aboutus',component: AboutUs},
+      {path: 'aiedgebox',name :'aiedgebox',component: AIEdgeBox},
+      
+      
     ]
   },
 ]
