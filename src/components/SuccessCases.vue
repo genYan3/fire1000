@@ -219,7 +219,7 @@ export default {
 }
 </script>
   
-<style scoped lang="less">
+<style scoped lang="less" scoped>
 @import url("//unpkg.com/element-ui@2.15.14/lib/theme-chalk/index.css");
   .successcases {
         width: 100%;

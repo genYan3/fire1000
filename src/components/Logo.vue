@@ -18,7 +18,7 @@
     }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .logo {
     margin-left: 70px;
 }
