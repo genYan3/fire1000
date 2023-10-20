@@ -14,6 +14,9 @@
     <div class="isActive" id="isActive">
         <CoreProducts></CoreProducts>
     </div>
+    <div class="isActive pos" id="isISH">
+        <IndustrySolutionsHover></InDustrySolutionsHover>
+    </div>
 </div>
 </template>
 
@@ -21,6 +24,7 @@
 import NavMenu from './NavMenu.vue';
 import Logo from './Logo.vue'
 import CoreProducts from '@/components/CoreProducts'
+import IndustrySolutionsHover from '@/components/IndustrySolutionsHover'
 export default {
     name: "TopBar",
     data() {
@@ -45,14 +49,8 @@ export default {
                     path: "/successcases"
                 },
                 {
-                    id: "cgal",
-                    index: "4",
-                    title: "成功案例",
-                    path: "/industrysolutions"
-                },
-                {
                     id: "gywm",
-                    index: "5",
+                    index: "4",
                     title: "关于我们",
                     path: "/aboutus"
                 }
@@ -75,7 +73,8 @@ export default {
                     "address": "天山西路438号"
                 },
             ],
-            isRemove: this.$store.state.isRemove
+            isRemove: this.$store.state.isRemove,
+            isXdfa:this.$store.state.isXdfa
         }
     },
     props: {
@@ -84,7 +83,8 @@ export default {
     components: {
         NavMenu,
         Logo,
-        CoreProducts
+        CoreProducts,
+        IndustrySolutionsHover
     },
     methods: {
         querySeach(string, cb) {
@@ -109,32 +109,58 @@ export default {
                 path: ph
             })
         },
-        addCls(eleCore) {
-            eleCore.classList.remove("isActive")
-            this.$store.commit("setIsRemover", false)
+        addCls(ele,setNameVal) {
+            // console.log(ele.classList);
+            ele.classList.remove("isActive")
+            this.$store.commit(setNameVal, false)
         },
-        removeCls(eleCore) {
+        removeCls(ele,setNameVal) {
+            // console.log(this.classList);
             if (this.isRemove) {
-                eleCore.classList.add("isActive")
-                this.$store.commit("setIsRemover", true)
+                ele.classList.add("isActive")
+                this.$store.commit(setNameVal, true)
             } else return
+        },
+        BarHoverEle(ele, obj) {
+            ele.addEventListener("mouseenter", () => {
+                this.addCls(obj,"setIsRemover")
+            })
+            ele.addEventListener("mouseleave", () => {
+                setTimeout(this.removeCls(obj,"setIsRemover"), 1000)
+            })
+
+        },
+        DISHoverEle(ele) {
+            ele.addEventListener("mouseenter", () => {
+                this.addCls(ele,"setIsXdfa")
+            })
+            ele.addEventListener("mouseleave", () => {
+                this.removeCls(ele,"setIsXdfa")
+            })
         }
     },
+
     mounted() {
         let ele = document.getElementById("hxcp")
         let eleCore = document.getElementById("isActive")
-        ele.addEventListener("mouseenter", () => {
-            this.addCls(eleCore)
-        })
-        ele.addEventListener("mouseleave", () => {
-            setInterval(this.removeCls(eleCore), 1000)
-        })
-        eleCore.addEventListener("mouseenter", () => {
-            this.addCls(eleCore)
-        })
-        eleCore.addEventListener("mouseleave", () => {
-            this.removeCls(eleCore)
-        })
+        let ISH = document.getElementById("isISH")
+        let xdfa = document.getElementById("xdfa")
+        this.BarHoverEle(ele,eleCore)
+        this.BarHoverEle(xdfa,ISH)
+        this.DISHoverEle(eleCore)
+        this.DISHoverEle(ISH)
+        // ele.addEventListener("mouseenter", () => {
+        //     this.addCls(eleCore)
+        // })
+        // ele.addEventListener("mouseleave", () => {
+        //     setInterval(this.removeCls(eleCore), 1000)
+        // })
+        // eleCore.addEventListener("mouseenter", () => {
+        //     this.addCls(eleCore)
+        // })
+        // eleCore.addEventListener("mouseleave", () => {
+        //     this.removeCls(eleCore)
+        // })
 
     },
 }
@@ -160,10 +186,11 @@ export default {
 
 .isActive {
     display: none;
-    opacity: 0;
-    transition: opactiy 1.5s;
 }
-.el-menu-item:active{
-    
+
+.pos {
+    position: absolute;
+    top: 60px;
+    left: 28%;
 }
 </style>

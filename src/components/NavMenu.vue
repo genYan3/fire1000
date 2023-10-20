@@ -3,7 +3,7 @@
 <div class="Navmenu">
     <el-menu :default-active="active" mode="horizontal">
         <template v-for="menu in menuList">
-            <el-menu-item :index="menu.index" :name="menu.index" :path="menu.path" @click="$emit('topClick', $event)" :id="menu.id">{{ menu.title }}</el-menu-item>
+            <el-menu-item :index="menu.index" :name="menu.index" :path="menu.path" @click="parentClick($event)" :id="menu.id">{{ menu.title }}</el-menu-item>
         </template>
     </el-menu>
 </div>
@@ -23,6 +23,13 @@ export default {
     },
     created() {},
     mounted() {
+    },
+    methods: {
+        parentClick(event) {
+            // console.log(event);
+            if(event.index != "2" && event.index != "3") this.$emit('topClick', event)
+            
+        }
     },
 };
 </script>
