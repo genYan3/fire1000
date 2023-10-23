@@ -15,7 +15,7 @@ export default {
     },
 
     mounted() {
-        setTimeout(() => {
+setTimeout(() => {
             // 进入网页两秒后出现在线咨询模块
             let isShowOnlineConsultation = document.getElementById("OnlineConsultation")
             // console.log(isShowOnlineConsultation);
@@ -47,7 +47,7 @@ export default {
             // this.subLocalStorage()
             sessionStorage.setItem("index", JSON.stringify(this.$store.state.index))
         })
-    },
+            },
 };
 </script>
 
