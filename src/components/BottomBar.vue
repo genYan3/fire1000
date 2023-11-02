@@ -21,7 +21,8 @@ export default {
     text-align: center;
     width:100%;
     height: 100%;
-    background-color: red;
+    background: linear-gradient(45deg, #373ad3 0%, #03378b 100%);
     line-height: 60px;
+    color: #ffffff;
 }
 </style>

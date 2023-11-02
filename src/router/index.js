@@ -8,6 +8,7 @@ import AboutUs from '../components/AboutUs.vue'
 import AIEdgeBox from '../components/AIEdgeBox.vue'
 import AlgorithmPlatform from '../components/AlgorithmPlatform.vue'
 import Algorithmtools from '../components/Algorithmtools.vue'
+import Applicationtest from '../components/Applicationtest.vue'
 
 Vue.use(VueRouter)
 
@@ -28,7 +29,8 @@ const routes = [
       {path: 'aboutus',name :'aboutus',component: AboutUs},
       {path: 'aiedgebox',name :'aiedgebox',component: AIEdgeBox},
       {path:'algorithmplatform',name:'algorithmplatform',component:AlgorithmPlatform},
-      {path:'algorithmtools',name:'algorithmtools',component:Algorithmtools}
+      {path:'algorithmtools',name:'algorithmtools',component:Algorithmtools},
+      {path:'applicationtest',name:'applicationtest',component:Applicationtest}
       
       
     ]
