@@ -2,7 +2,7 @@
 <div>
     <el-card :body-style='{"padding":0}' class="CardStyle">
         <el-row :gutter="30">
-            <el-col :span="7" v-for="item,index in ISHData" :key="index">{{item}}</el-col>
+            <el-col :span="7" v-for="item,index in ISHData" :key="index" @click="toDatails(item.path)">{{item.name}}</el-col>
         </el-row>
     </el-card>
 </div>
@@ -23,7 +23,9 @@ export default {
     },
 
     methods: {
-
+        toDatails(val){
+            this.$router.push(val)
+        }
     },
 };
 </script>
