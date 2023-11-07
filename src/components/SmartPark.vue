@@ -26,12 +26,12 @@
                         </div>
                         <div class="boxTow">
                             <div class="boxTow_main">
-                                <h2>智慧工地AI算法方案</h2>
-                                <p>围绕工地现场人、机、料、法、环五大生产要素，综合运用物联网、云计算、大数据及互联网技术，提供工地设备监控、作业行为监测、工地安防管理、工地环境监测等能力，助力智慧文明安全工地建设。</p>
+                                <h2>智慧园区AI算法方案</h2>
+                                <p>传统的园区管理模式存在巡查范围广、人工管理成本高、巡检受时间、空间限制大、特殊事件感知慢、应急响应效率低等问题，且业务系统多，各端数据孤立，协同管理能力低。千火科技智慧园区解决方案，  对园区内车辆停放、人员出入、设备安全进行全方面监控，搭建运行状态智能监管、异常事件动态感知、突发事件联动应急的一体化园区管理系统，提升园区智慧化综合管理能力。</p>
                                 <span class="contactUs"><a href="">申请试用</a></span>
                             </div>
                             <div class="boxTow_img">
-                                <img src="../assets/img/智慧工地功能框架.png" alt="大标题2图片" style="width:105%;">
+                                <img src="../assets/img/智慧园区.png" alt="大标题2图片" style="width:105%;">
                             </div>
                         </div>
                         <div class="boxThree">
@@ -54,7 +54,7 @@
                             <div class="boxFour_main">
                                 <div class="boxFour_mainOne" v-for="item in boxFour" :key="item.id">
                                     <div class="boxFour_mainOne_img">
-                                        <img :src="item.img" alt="大标题4图片" style="width: 90%;">
+                                        <img :src="item.img" alt="大标题4图片" style="width: 100%;">
                                     </div>
                                     <div class="boxFour_mainOne_text">
                                         <h3>{{item.title}}</h3>
@@ -122,7 +122,7 @@ export default {
         boxOne:[{
             id:1,
             title:"行业背景",
-            textOne: "生产操作过程规范监管难，违章操作易引发安全事故",
+            textOne: "智慧社区解决方案人、融合社区场景下组织等多种数据资源",
             textTow:"劳动强度大，影响注意力集中，易忽视个人安全防护"
         },
         {
@@ -154,24 +154,19 @@ export default {
         ],
         boxFour:[{
             id:1,
-            title:"全天监控，保障生命财产安全",
-            textOne: "24h多点位监控，真实反映现场施工实况，避免物品丢失或失窃，保护工地人身财产安全。",
-            img:require("@/assets/img/工地方案亮点1.png")
+            title:"降低园区运营管理成本",
+            textOne: "针对园区出入人员、环境，通过监控摄像头实时监控、视频图像智能分析识别，减少巡查人员投入，降低园区运营管理成本。",
+            img:require("@/assets/img/智慧园区方案亮点.png")
         },{
             id:2,
-            title:"智能判断，主动预防安全事故",
-            textOne: "人员行为、设备状态、环境数据智能分析、实时反馈、危险行为自动预警，风险及时管控，突发事件快速反应。",
-            img:require("@/assets/img/工地方案亮点2.png")
+            title:"提升园区综合管理水平",
+            textOne: "通过系统自动告警、多方联动应急，实现突发事件的快速响应处理，做到提前感知、处理过程闭环、事后可园区综合管理水平。",
+            img:require("@/assets/img/智慧园区方案亮点2.png")
         },{
             id:3,
-            title:"操作留痕，事件处理有据可依",
-            textOne: "匣子回溯操作细节，辅助事故处理。",
-            img:require("@/assets/img/工地方案亮点3.png")
-        },{
-            id:4,
-            title:"智能联动，“监测+治理”一体化管理",
-            textOne: "同步联动降尘装置，数据超标智能启动，实现设备自动远程联动控制，提升环境整改效率。",
-            img:require("@/assets/img/工地方案亮点4.png")
+            title:"提升园区科技形象",
+            textOne: "利用GIS、可视化、大数据等信息技术，搭建园区运行可视化大屏，提升园区科技形象。",
+            img:require("@/assets/img/智慧园区方案亮点3.png")
         }],
         boxFive:[{
             id:1,
@@ -197,55 +192,46 @@ export default {
         }],
         boxSix:[{
             id:1,
-            title:"人员定位",
-            text:"支持实时定位、重点区域预警、特殊时段预警.",
-            imgIcon:require("@/assets/img/人员定位.png")
+            title:"可视化的运行状态",
+            text:"通过电子地图实现监控画面实时可查、历史监控随时调阅，异常事件自动上报，监控后台智能调度。",
+            imgIcon:require("@/assets/img/可视化的运行状态.png")
         },
         {
             id:2,
-            title:"塔机安全监控",
-            text:"支持多限位监测、黑匣子记录、系统自检、驾驶员身份识别、远程监控。",
-            imgIcon:require("@/assets/img/塔机安全监控.png")
+            title:"多维度的统计图表",
+            text:"从监控运行时长、捕捉异常行为数、系统告警数、每次应急处理时长数等多维度进行数据统计分析，反映园区智能化管理成效。",
+            imgIcon:require("@/assets/img/多维度的统计图表.png")
         },{
             id:3,
-            title:"驾驶员视觉辅助",
-            text:"支持吊装360°高清视频动态跟踪、多机位全景监管、吊钩迫踪、语音对讲。",
-            imgIcon:require("@/assets/img/驾驶员视觉辅助.png")
+            title:"智能化的场景分析",
+            text:"视频图像分析技术自动监测入侵、睡岗、离岗、抽烟、摔倒等人员行为，及烟露、火焰等环境因素，提供智能管理手段。",
+            imgIcon:require("@/assets/img/智能化的场景分析.png")
         },{
             id:4,
-            title:"施工升降机安全监控",
-            text:"支持高度采集、驾驶员身份识别、载重检测、人数识别、数据远程传输、黑匣子记录。",
-            imgIcon:require("@/assets/img/施工升降机安全监控.png")
+            title:"自动化的告警手段",
+            text:"系统一且捕捉到人员入侵、摔倒、车辆违停等画面，监控后台立马定位事发地点，并告警提示，事件感知更敏感。",
+            imgIcon:require("@/assets/img/自动化的告警手段.png")
         },{
             id:5,
-            title:"人员行为识别",
-            text:"支持劳保用具穿戴、人员倒地、打架、人群聚集、抽烟、孝爬、绊线、打电话、玩手机等人员行为智能识别预警。",
-            imgIcon:require("@/assets/img/人员行为识别.png")
+            title:"联动的应急方案",
+            text:"支持接入多业务系统，如门禁系统、监控系统，一旦启动应急，可通过中控系统操控其余系统，实现多方应急联动。",
+            imgIcon:require("@/assets/img/联动的应急方案.png")
         },{
             id:6,
-            title:"环境数据监测",
-            text:"支持扬尘颗粒、噪音、温度、湿度等环境数据智能监测预警",
-            imgIcon:require("@/assets/img/环境数据监测.png")
-        }]
+            title:"严格的权限管理",
+            text:"根据人员部门与职位，灵活配置管理人员可视、可操控权限。",
+            imgIcon:require("@/assets/img/严格的权限管理.png")
+        },
+    ]
         ,applyObj:{}
     }
   },
    created() {
-//     this.fetchContent();
    },
     methods: {
         imgPath() {
             return 'http://hjjai.com:6789/commonImg/'
         },
-//     fetchContent() {
-//       axios.get('服务器api')
-//         .then(response => {
-//           this.carouselItems = response.data;
-//         })
-//         .catch(error => {
-//           console.error(error);
-//         });
-//     }
         boxFiveDemo(event) {
             let obj = this.boxFive.filter((item) => {
                 return item.id.toString() === event.target.id;
@@ -603,7 +589,8 @@ element.style {
             text-align: center;
             border: 1px solid rgb(246,246,246);
             img{
-                width: 60%;
+                width: 40%;
+                height: 40%;
             }
             h3{
                 color: #333333;

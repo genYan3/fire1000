@@ -1,13 +1,10 @@
 <template>
     <div id="aboutus">
-        <div class="container">
-            <div class="header">
-                <div class="boxOne">
-                    <h1 class="textOne">诚信 专业 合作 共赢</h1>
-                    <div class="textTow">专业化、科学化、人性化</div>
-                </div>
-            </div>
-        </div>
+        <el-carousel height="450px" :interval=5000 style="z-index: -1;">
+            <el-carousel-item v-for="item in img" :key="item.id">
+                <img :src="item.src" style="width: 100%;height: 100%;">
+            </el-carousel-item>
+        </el-carousel>
         <div class="main">
             <div class="title">
                 <p class="p1">联系我们</p>
@@ -59,7 +56,13 @@ export default {
     name: "aboutus",
     data() {
         return {
-        
+            img:[{
+                    id:1,
+                    src:require("@/assets/img/背景.jpg"),
+                },{
+                    id:2,
+                    src:require("@/assets/img/背景2.jpg"),
+                }],
         }
     }
 }
