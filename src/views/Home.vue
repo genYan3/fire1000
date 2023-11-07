@@ -2,7 +2,7 @@
 <div id="Home">
     <el-row class="rowPos">
         <el-col :span="24" class="colPos">
-            <el-carousel height="450px" style="z-index: -1;">
+            <el-carousel height="450px" :interval=5000 style="z-index: -1;">
             <el-carousel-item v-for="(item, index) in imgs" :key="index">
                 <img :src="imgPath() + item.path" style="width: 100%;height: 100%;">
             </el-carousel-item>
@@ -42,7 +42,7 @@
                         </div>
                     </div>
                     <div class="boxFive_img">
-                        <img :src="applyObj.img" alt="随小标题变动而变动" style="width: 100%;">
+                        <img :src="imgPath()+applyObj.path" alt="随小标题变动而变动" style="width: 100%;">
                     </div>
                 </div>
             </div>
@@ -147,9 +147,12 @@ export default {
             carouselItems2: "",
             applyObj: {},
             currentPage: 1,
-            pageSize: 1,
-            type: 1,
-            imgs: []
+            pageSize: 2,
+            type: 10,
+            imgs: [],
+            homepageSceneList:[],
+            background:[],
+
         }
     },
     props: {},
@@ -178,10 +181,8 @@ export default {
             this.steCarou(val)
         },
         boxFiveDemo(event) {
-            let obj = this.boxFive.filter((item) => {
-                return item.id.toString() === event.target.id;
-            });
-            this.applyObj = obj[0];
+            let obj = this.homepageSceneList[event.target.id-1]
+                        this.applyObj = obj;
             this.boxFive[event.target.id-1].Icon=true
             },
         changeIn(val){
@@ -202,7 +203,25 @@ export default {
             }
         })
         this.imgs = result.data.data.data
-        console.log(this.imgs)
+        // console.log(this.imgs)
+        // 获取首页场景
+        let homepageScene = await axios.get("http://hjjai.com:6789/img/getImgByType",{
+            params:{
+                currentPage: 1,
+                pageSize: 3,
+                type: 14
+            }
+        })
+        this.homepageSceneList = homepageScene.data.data.data
+        let background = await axios.get("http://hjjai.com:6789/img/getImgByType",{
+            params:{
+                currentPage: 1,
+                pageSize: 1,
+                type: 12
+            }
+        })
+        this.backgroundList = background.data.data.data
+        console.log(this.homepageSceneList);
     },
     components: {
     },

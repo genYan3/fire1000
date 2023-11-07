@@ -1,6 +1,6 @@
 <template>
     <div id="algorithmtools">
-        <el-carousel height="450px" style="z-index: -1;">
+        <el-carousel height="450px" :interval=5000 style="z-index: -1;">
             <el-carousel-item v-for="item in img" :key="item.id">
                 <img :src="item.src" style="width: 100%;height: 100%;">
             </el-carousel-item>
@@ -308,7 +308,7 @@
         justify-content: space-between;
         .boxOne_text{
             width: 30%;
-            height: 100%;
+            height: 110px;
             padding: 1%;
             background-color: #f4f8ff;
             h3{
@@ -433,6 +433,7 @@
             }
             img{
                 width: 100%;
+    
                 transition: all 0.8s ease-in-out;
             }
             img:hover{

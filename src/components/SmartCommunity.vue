@@ -26,12 +26,12 @@
                         </div>
                         <div class="boxTow">
                             <div class="boxTow_main">
-                                <h2>智慧工地AI算法方案</h2>
-                                <p>围绕工地现场人、机、料、法、环五大生产要素，综合运用物联网、云计算、大数据及互联网技术，提供工地设备监控、作业行为监测、工地安防管理、工地环境监测等能力，助力智慧文明安全工地建设。</p>
+                                <h2>智慧社区AI算法方案</h2>
+                                <p>智慧社区解决方案融合社区场景下的人、事、地、物、组织等多种数据资源，通过物联网与人工智能对环境实时监控、自动预警，创新管理手段，提升社区安全等级；通过大数据、云计算实现资源整合、数据共享，创新服务模式，为社区居民提供周到、多元的公共服务，助力新型平安社区、美丽社区、幸福社区和文明社区的建设。</p>
                                 <span class="contactUs"><a href="">申请试用</a></span>
                             </div>
                             <div class="boxTow_img">
-                                <img src="../assets/img/智慧工地功能框架.png" alt="大标题2图片" style="width:105%;">
+                                <img src="../assets/img/智慧社区.png" alt="大标题2图片" style="width:105%;">
                             </div>
                         </div>
                         <div class="boxThree">
@@ -122,7 +122,7 @@ export default {
         boxOne:[{
             id:1,
             title:"行业背景",
-            textOne: "生产操作过程规范监管难，违章操作易引发安全事故",
+            textOne: "智慧社区解决方案人、融合社区场景下组织等多种数据资源",
             textTow:"劳动强度大，影响注意力集中，易忽视个人安全防护"
         },
         {
@@ -154,24 +154,19 @@ export default {
         ],
         boxFour:[{
             id:1,
-            title:"全天监控，保障生命财产安全",
-            textOne: "24h多点位监控，真实反映现场施工实况，避免物品丢失或失窃，保护工地人身财产安全。",
-            img:require("@/assets/img/工地方案亮点1.png")
+            title:"提升社区安全等级",
+            textOne: "通过社区环境实时监控，实现安全隐患智能感知、危险联动应急，提升社区安全等级。",
+            img:require("@/assets/img/智慧社区方案亮点.png")
         },{
             id:2,
-            title:"智能判断，主动预防安全事故",
-            textOne: "人员行为、设备状态、环境数据智能分析、实时反馈、危险行为自动预警，风险及时管控，突发事件快速反应。",
-            img:require("@/assets/img/工地方案亮点2.png")
+            title:"提升社区形象",
+            textOne: "通过垃圾溢出监管、垃圾分类智能监管，碳排放数据采集、监测、核算等措施，建设低碳、美好社区。",
+            img:require("@/assets/img/智慧社区方案亮点2.png")
         },{
             id:3,
-            title:"操作留痕，事件处理有据可依",
-            textOne: "匣子回溯操作细节，辅助事故处理。",
-            img:require("@/assets/img/工地方案亮点3.png")
-        },{
-            id:4,
-            title:"智能联动，“监测+治理”一体化管理",
-            textOne: "同步联动降尘装置，数据超标智能启动，实现设备自动远程联动控制，提升环境整改效率。",
-            img:require("@/assets/img/工地方案亮点4.png")
+            title:"提升业主满意度",
+            textOne: "通过对特殊人员重点监控、人员行为智能分析，智能识别老人跌倒、犬类牵绳、高空抛物等场景，保证社区人员安全，提升业主满意度。",
+            img:require("@/assets/img/智慧社区方案亮点3.png")
         }],
         boxFive:[{
             id:1,
@@ -197,55 +192,40 @@ export default {
         }],
         boxSix:[{
             id:1,
-            title:"人员定位",
-            text:"支持实时定位、重点区域预警、特殊时段预警.",
-            imgIcon:require("@/assets/img/人员定位.png")
+            title:"可视化监管",
+            text:"通过GIS网格图、三维实景图实时调阅监控画面，事发地点自动标记定位、弹窗警示。",
+            imgIcon:require("@/assets/img/可视化监管.png")
         },
         {
             id:2,
-            title:"塔机安全监控",
-            text:"支持多限位监测、黑匣子记录、系统自检、驾驶员身份识别、远程监控。",
-            imgIcon:require("@/assets/img/塔机安全监控.png")
+            title:"智能监管",
+            text:"社区道路、停车场、活动中心、电梯等重点区域实时监控。",
+            imgIcon:require("@/assets/img/智能监管.png")
         },{
             id:3,
-            title:"驾驶员视觉辅助",
-            text:"支持吊装360°高清视频动态跟踪、多机位全景监管、吊钩迫踪、语音对讲。",
-            imgIcon:require("@/assets/img/驾驶员视觉辅助.png")
+            title:"智能感知",
+            text:"对烟雾、火焰、跌倒、打架、犬类牵绳、高空抛物、徘徊、热成像测温、口罩戴、人群聚焦等场景智能分析识别，异常事件自动告警。",
+            imgIcon:require("@/assets/img/智能感知.png")
         },{
             id:4,
-            title:"施工升降机安全监控",
-            text:"支持高度采集、驾驶员身份识别、载重检测、人数识别、数据远程传输、黑匣子记录。",
-            imgIcon:require("@/assets/img/施工升降机安全监控.png")
+            title:"联动应急",
+            text:"通广播、可视对讲、门禁、消防等系统集成，一旦告警，可多系统同时启动应急。",
+            imgIcon:require("@/assets/img/联动应急.png")
         },{
             id:5,
-            title:"人员行为识别",
-            text:"支持劳保用具穿戴、人员倒地、打架、人群聚集、抽烟、孝爬、绊线、打电话、玩手机等人员行为智能识别预警。",
-            imgIcon:require("@/assets/img/人员行为识别.png")
-        },{
-            id:6,
-            title:"环境数据监测",
-            text:"支持扬尘颗粒、噪音、温度、湿度等环境数据智能监测预警",
-            imgIcon:require("@/assets/img/环境数据监测.png")
+            title:"流程闭环",
+            text:"从监测到异常、事件生成、事件处理、处理过程、处理结果、全过程自动建档，事后可调阅。",
+            imgIcon:require("@/assets/img/流程闭环.png")
         }]
         ,applyObj:{}
     }
   },
    created() {
-//     this.fetchContent();
    },
     methods: {
         imgPath() {
             return 'http://hjjai.com:6789/commonImg/'
         },
-//     fetchContent() {
-//       axios.get('服务器api')
-//         .then(response => {
-//           this.carouselItems = response.data;
-//         })
-//         .catch(error => {
-//           console.error(error);
-//         });
-//     }
         boxFiveDemo(event) {
             let obj = this.boxFive.filter((item) => {
                 return item.id.toString() === event.target.id;
@@ -603,7 +583,8 @@ element.style {
             text-align: center;
             border: 1px solid rgb(246,246,246);
             img{
-                width: 60%;
+                width: 40%;
+                height: 40%;
             }
             h3{
                 color: #333333;

@@ -1,6 +1,6 @@
 <template>
   <div id="aiedgebox">
-    <el-carousel height="450px" style="z-index: -1">
+    <el-carousel height="450px" :interval=5000 style="z-index: -1">
       <el-carousel-item v-for="item in img" :key="item.id">
         <img
           :src="item.src"

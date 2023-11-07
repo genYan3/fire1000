@@ -9,6 +9,10 @@ import AIEdgeBox from '../components/AIEdgeBox.vue'
 import AlgorithmPlatform from '../components/AlgorithmPlatform.vue'
 import Algorithmtools from '../components/Algorithmtools.vue'
 import Applicationtest from '../components/Applicationtest.vue'
+import SmartCommunity from '../components/SmartCommunity.vue'
+import SmartPark from '../components/SmartPark.vue'
+import SmartStore from '../components/SmartStore.vue'
+import SmartFactory from '../components/SmartFactory.vue'
 
 Vue.use(VueRouter)
 
@@ -30,8 +34,11 @@ const routes = [
       {path: 'aiedgebox',name :'aiedgebox',component: AIEdgeBox},
       {path:'algorithmplatform',name:'algorithmplatform',component:AlgorithmPlatform},
       {path:'algorithmtools',name:'algorithmtools',component:Algorithmtools},
-      {path:'applicationtest',name:'applicationtest',component:Applicationtest}
-      
+      {path:'applicationtest',name:'applicationtest',component:Applicationtest},
+      {path:'smartcommunity',name:'smartcommunity',component:SmartCommunity},
+      {path:'smartpark',name:'smartpark',component:SmartPark},
+      {path:'smartstore',name:'smartstore',component:SmartStore},
+      {path:'smartfactory',name:'smartfactory',component:SmartFactory},
       
     ]
   },

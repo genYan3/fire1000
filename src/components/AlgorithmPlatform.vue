@@ -1,6 +1,6 @@
 <template>
     <div id="AlgorithmPlatform">
-        <el-carousel height="450px" style="z-index: -1;">
+        <el-carousel height="450px" :interval=5000 style="z-index: -1;">
             <el-carousel-item v-for="item in img" :key="item.id">
                 <img :src="item.src" style="width: 100%;height: 100%;">
             </el-carousel-item>
@@ -147,7 +147,7 @@
                 },{
                     id:2,
                     icon: "https://ow.extremevision.com.cn/uploadfile/file/20230421/1682041503922384.svg",
-                    img: "https://ow.extremevision.com.cn/uploadfile/file/20230421/1682041462697843.png",
+                    img: require("@/assets/img/2应用中心.png"),
                     title:"应用中心",
                     text:" 汇聚基于 AI 的智能应用，作为窗口向终端用户提供可直接使用的 AI 应用及AI 工具，同时也向应用开发者提供基于算法服务的 API 接口，开发者无需烦恼算法安装部署或数据接入管理等问题，只需专注业务侧的实现"
                 },
@@ -599,8 +599,10 @@
             width: 55%;
             height: 100%;
             margin-left: 10%;
+            transition: opacity .5s linear;
             img{
                 width: 80%;
+                
             }
         }
     }
